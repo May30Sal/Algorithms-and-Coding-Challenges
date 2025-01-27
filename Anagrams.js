@@ -1,5 +1,8 @@
-//ANAGRAM CHALLENGE
-// To be O(n) it's better to avoid nested loops. Here I passed the 2 strings into a object and then compared the 2 objects.
+//Anagram Challenge using Frequency Counter
+
+/*In this challenge we work with Anagrams (different words that contains exactly the same letters) to understand and apply the Big O concept.
+For the algorithm to have a runtime of O(n), meaning that the time it takes to run grows accordingly to the size of it, it's better to avoid using nested loops.
+To approach the solution I passed the 2 strings into an object, and then compared the 2 objects, avoiding using nested loops.*/
 
 function validAnagram(word1, word2){
     if ((word1.length != word2.length) || (typeof word1 != 'string') || (typeof word2 != 'string')) {
