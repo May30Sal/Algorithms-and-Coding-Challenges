@@ -28,6 +28,7 @@ function validAnagram(word1, word2){
                 return false;
             }
         }
+        console.log(anagram1, anagram2);
         console.log('true')
         return true //Always return the value (not only print it to the console!)
   }
