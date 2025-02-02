@@ -13,7 +13,7 @@ function MaxSubarraySum(arr, num) {
         //console.log(curSum)
         maxSum = curSum
         for (var i = num; i <= arr.length - 1;i++) {
-            curSum = curSum - arr[i-num] + arr[i]
+            curSum = curSum - arr[i-num] + arr[i] //arr[i-num] = arr[0]
             //console.log(curSum)
             maxSum = Math.max(curSum, maxSum)
         }
