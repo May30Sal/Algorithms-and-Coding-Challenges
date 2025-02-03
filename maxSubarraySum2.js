@@ -16,7 +16,7 @@ function maxSubarraySum(arrVal, numVal){
             maxSum += arrVal[i]
         }
         for (let i = 1; i < arrVal[numVal-1]; i++) {
-            falta logica
+            falta adicionar logica
             } else {
                 continue
             }
