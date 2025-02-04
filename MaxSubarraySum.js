@@ -21,6 +21,6 @@ function MaxSubarraySum(arr, num) {
     }
 }
 
-MaxSubarraySum([8,2,5,2,2,10,1], 3)
+MaxSubarraySum([8,2,5,2,2,10,1], 3) //15
 // MaxSubarraySum([1,1], 2)
 // MaxSubarraySum([1], 2)

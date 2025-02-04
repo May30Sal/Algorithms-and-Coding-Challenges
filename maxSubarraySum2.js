@@ -7,28 +7,32 @@ Time Complexity - O(N)
 Space Complexity - O(1)
 */
 
+//I needed to look at the previous model of this algotrithm, as I wasn't understading exactly how it works. 
+
 function maxSubarraySum(arrVal, numVal){
     let maxSum = 0;
+    let currSum = 0;
     if( arrVal.length < numVal) {
         return false;
     } else {
         for (let i = 0; i < numVal; i++) {
-            maxSum += arrVal[i]
+            currSum += arrVal[i]
         }
-        for (let i = 1; i < arrVal[numVal-1]; i++) {
-            falta adicionar logica
-            } else {
-                continue
-            }
+        for (let i = numVal; i <= arrVal.length-1; i++) {
+            let leftWin = arrVal[i];
+            let rigthWin = arrVal[i-numVal];
+            currSum = currSum - rigthWin + leftWin
+            maxSum = Math.max(maxSum, currSum)
       }
+      console.log(maxSum);
+      return maxSum;
     }
-    
-  console.log(maxSum);
 }
 
 //Tests
-maxSubarraySum([100,200,300,400], 3) // 700
-// maxSubarraySum([1,4,2,10,23,3,1,0,20], 4)  // 39 
-// maxSubarraySum([-3,4,0,-2,6,-1], 2) // 5
-// maxSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2) // 5
-// maxSubarraySum([2,3], 3) // null
+maxSubarraySum([100,200,300,400], 2) // 700
+maxSubarraySum([1,4,2,10,23,3,1,0,20], 4)  // 39 
+maxSubarraySum([-3,4,0,-2,6,-1], 2) // 5
+maxSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2) // 5
+maxSubarraySum([2,3], 3) // null
+
